@@ -5,6 +5,6 @@ public class StartSceneManager : MonoBehaviour
 {
     public void PressStart()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("MainScene");
     }
 }
