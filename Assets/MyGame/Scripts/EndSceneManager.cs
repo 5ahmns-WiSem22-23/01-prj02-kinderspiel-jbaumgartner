@@ -9,8 +9,26 @@ public class EndSceneManager : MonoBehaviour
     // Im Start() wird der Text des Status-Textfelds auf Basis des aktuellen Gewinners gesetzt.
     private void Start()
     {
-        status.text = MainSceneManager.currentWinner == MainSceneManager.Item.Boat ? "Das Boot hat gewonnen" :
-            MainSceneManager.fishCount <= 2 ? "Unentschieden" : "Die Fische haben gewonnen";
+        if(MainSceneManager.currentWinner == MainSceneManager.Item.Fish)
+        {
+            status.text = "Die Fische haben gewonnen";
+        }
+
+        else if(MainSceneManager.currentWinner == MainSceneManager.Item.Boat)
+        {
+            if (MainSceneManager.freeFish > 2)
+            {
+                status.text = "Die Fische haben gewonnen";
+            }
+            else if(MainSceneManager.freeFish == 2)
+            {
+                status.text = "Unentschieden";
+            }
+            else
+            {
+                status.text = "Das Boot gewinnt";
+            }
+        }
     }
 
     // Die Methode PressRestart() lädt die MainScene, wenn sie aufgerufen wird.

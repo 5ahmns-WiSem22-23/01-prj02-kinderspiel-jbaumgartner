@@ -14,7 +14,9 @@ public class MainSceneManager : MonoBehaviour
 
     public int moveAmount;
 
+    public static int freeFish;
     public static int fishCount;
+
 
     public GameObject redFish;
     public GameObject blueFish;
@@ -26,6 +28,7 @@ public class MainSceneManager : MonoBehaviour
     // In der Start() Methode wird fishCount auf 4 gesetzt.
     private void Start()
     {
+        freeFish = 0;
         fishCount = 4;
     }
 
@@ -64,7 +67,7 @@ public class MainSceneManager : MonoBehaviour
                 }
                 catch
                 {
-                    RollDice();
+                    MoveItem(boat);
                 }
                 break;
 
@@ -76,7 +79,7 @@ public class MainSceneManager : MonoBehaviour
                 }
                 catch
                 {
-                    RollDice();
+                    MoveItem(boat);
                 }
                 break;
 
@@ -88,7 +91,7 @@ public class MainSceneManager : MonoBehaviour
                 }
                 catch
                 {
-                    RollDice();
+                    MoveItem(boat);
                 }
                 break;
 
@@ -100,7 +103,7 @@ public class MainSceneManager : MonoBehaviour
                 }
                 catch
                 {
-                    RollDice();
+                    MoveItem(boat);
                 }
                 break;
 
@@ -114,17 +117,5 @@ public class MainSceneManager : MonoBehaviour
                 MoveItem(boat);
                 break;
         }
-    }
-
-    // Die CheckForWin() Methode reduziert fishCount um 1 und ruft GameOver() auf, wenn fishCount 0 oder kleiner ist.
-    public void CheckForWin()
-    {
-        fishCount--;
-
-        if (fishCount <= 0)
-        {
-            GameOver(Item.Boat);
-        }
-
     }
 }
