@@ -33,4 +33,10 @@ EndScene
   Fish: https://www.freepik.com/free-vector/set-six-fish_2091508.htm#query=fish&position=2&from_view=keyword
 - Background: https://www.freepik.com/free-vector/aerial-view-canal_4804999.htm#query=river%20top%20down&position=25&from_view=search&track=ais
 
+**Limitations**
+
+Lässt sich nicht mit WebGL builden
+![Limitations](https://user-images.githubusercontent.com/72390133/216027139-1f60fe4c-3cc9-48c0-afef-dff07f90d53b.PNG)
+
+
 Copyright by @jbaumgartner
